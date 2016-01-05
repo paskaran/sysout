@@ -2,7 +2,8 @@
 An Eclipse Plugin for easy generating of System.out.println(); with selected variables. 
 
 # Install
-Copy the dev.paskaran.de.sysout_1.0.0.jar into your eclipse plugin folder and restart eclipse.
+Copy the sysout_source folder into your eclipse plugin folder and restart eclipse.
+If the plugin could not be found after the restart try starting eclipse with the *-clean* flag
 
 # Use
 - Open your Java-File with the Java-Editor. 
