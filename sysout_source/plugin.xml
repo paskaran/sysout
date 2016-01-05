@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+              <category
+            name="%category.name"
+            id="sysout.commands.category">
+      </category>
+      <command
+            categoryId="sysout.commands.category"
+            defaultHandler="sysout.handlers.SelectionHandler"
+            id="sysout.commands.SelectionHandlerCommand"
+            name="%command.name">
+      </command>
+   </extension>
+  <extension
+         point="org.eclipse.ui.handlers">
+               <handler
+            commandId="sysout.commands.SelectionHandlerCommand"
+            class="sysout.handlers.SelectionHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+           <key
+            commandId="sysout.commands.SelectionHandlerCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+         <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="dev.paskaran.sysout.toolbars.sampleToolbar">
+            <command
+                  commandId="sysout.commands.SelectionHandlerCommand"
+                  icon="icons/sample.gif"
+                  tooltip="%command.tooltip"
+                  id="dev.paskaran.sysout.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+     <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+   </extension>
+ 
+ 
+
+</plugin>
